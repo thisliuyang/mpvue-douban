@@ -8,10 +8,12 @@
       </block>
     </swiper>
     <div class="container_b" v-for="(item, i) in boards" :key="item.key">
-      <div class="item_title">{{item.title}}</div>
+      <a :href="'/pages/item/main?type='+ item.key +'&title=' + item.title">
+        <div class="item_title">{{item.title}}</div>
+      </a>
       <scroll-view class="content" scroll-x="true">
         <div class="inner">
-          <a href="#" v-for="(items, j) in item.movies" :key="j" >
+          <a :href="'/pages/item/main?id='+ items.id" v-for="(items, j) in item.movies" :key="j" >
             <div class="movie-item">
               <img class="movie-item-img" :src="items.images.small" mode="scaleToFill" />
               <span>{{ items.title }}</span>
