@@ -3,6 +3,7 @@
 > A Mpvue project
 
 ## Build Setup
+此分支用于开发
 
 ``` bash
 # 初始化项目
